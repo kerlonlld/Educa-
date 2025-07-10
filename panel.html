@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educa+ - Painel</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Onde você quer começar?</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('materias')">Matérias</a></li>
+        <li><a href="#" onclick="showSection('cronograma')">Cronograma</a></li>
+        <li><a href="#" onclick="showSection('quizzes')">Exercícios</a></li>
+        <li><a href="#" onclick="showSection('progresso')">Progresso</a></li>
+        <li><a href="#" onclick="showSection('notificacoes')">Notificações</a></li>
+        <li class="dropdown" id="menuDropdown">
+          <a href="#" onclick="toggleDropdown(event)">Menu</a>
+          <div class="dropdown-content" id="dropdownContent">
+            <a href="#">Downloads</a>
+            <a href="#">Bibliotecas</a>
+            <a href="#">Recomendações</a>
+            <a href="#">Sobre nós</a>
+            <a href="#" onclick="showSection('sair')">Sair</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="materias" class="section center-section">
+      <h2>Matérias</h2>
+      <div class="botoes-materias">
+        <button onclick="abrirMatematicaPDF(event)">Matemática</button>
+        <button onclick="abrirFisicaPDF(event)">Física</button>
+        <button onclick="abrirQuimicaPDF(event)">Química</button>
+        <button onclick="abrirPortuguesPDF(event)">Português</button>
+        <button onclick="abrirCienciasPDF(event)">Biologia</button>
+        <button onclick="abrirHistoriaPDF(event)">História</button>
+        <button onclick="abrirGeografiaPDF(event)">Geografia</button>
+      </div>
+    </section>
+
+    <section id="quizzes" class="section center-section" style="display: none;">
+      <h2>Exercícios</h2>
+      <div id="atividades">
+        <h3>Atividades por Matéria</h3>
+        <select id="materiaSelect" onchange="mostrarFormularioAtividade()">
+          <option value="">Selecione a matéria</option>
+          <option value="matemática">Matemática</option>
+          <option value="física">Física</option>
+          <option value="química">Química</option>
+          <option value="português">Português</option>
+          <option value="biologia">Biologia</option>
+          <option value="história">História</option>
+          <option value="geografia">Geografia</option>
+        </select>
+        <div id="formularioAtividade" class="form-container"></div>
+      </div>
+    </section>
+
+    <section id="progresso" class="section center-section" style="display: none;">
+      <div id="progressoConteudo"></div>
+    </section>
+
+    <section id="cronograma" class="section" style="display: none;">
+      <h2>Cronograma</h2>
+      <p>Planeje seus estudos e acompanhe seu desempenho.</p>
+    </section>
+
+    <section id="notificacoes" class="section" style="display: none;">
+      <h2>Notificações</h2>
+      <p>Aqui você verá atualizações importantes do Educa+.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Educa+. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    function abrirMatematicaPDF(e) { e.preventDefault(); window.open('https://www.todamateria.com.br/matematica/', '_blank'); }
+    function abrirFisicaPDF(e) { e.preventDefault(); window.open('https://www.todamateria.com.br/fisica/', '_blank'); }
+    function abrirQuimicaPDF(e) { e.preventDefault(); window.open('https://www.todamateria.com.br/quimica/', '_blank'); }
+    function abrirPortuguesPDF(e) { e.preventDefault(); window.open('https://www.todamateria.com.br/lingua-portuguesa/', '_blank'); }
+    function abrirCienciasPDF(e) { e.preventDefault(); window.open('https://www.todamateria.com.br/biologia/', '_blank'); }
+    function abrirHistoriaPDF(e) { e.preventDefault(); window.open('https://www.todamateria.com.br/historia/historia-do-brasil/', '_blank'); }
+    function abrirGeografiaPDF(e) { e.preventDefault(); window.open('https://www.todamateria.com.br/geografia/', '_blank'); }
+  </script>
+</body>
+</html>
