@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Educa+</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Educa+</h1>
+  </header>
+
+  <main>
+    <section class="descricao">
+      <h2>Aplicativo para alunos brilhantes!</h2>
+      <p>O Educa+ é uma plataforma inovadora que oferece uma experiência de aprendizado personalizada. Com uma interface amigável e recursos avançados, os estudantes têm acesso a conteúdos, atividades e relatórios que facilitam o desenvolvimento acadêmico.</p>
+      <ul>
+        <li>Biblioteca de conteúdos educacionais</li>
+        <li>Planejamento de estudos</li>
+        <li>Acompanhamento de desempenho</li>
+        <li>Formulários interativos de aprendizagem</li>
+      </ul>
+    </section>
+
+    <section class="login">
+      <form onsubmit="verificarLogin(event);">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required autocomplete="off" aria-label="Nome de usuário" />
+        
+        <label for="password">Matrícula:</label>
+        <input type="password" id="password" name="password" required autocomplete="off" aria-label="Matrícula do aluno" />
+        
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
