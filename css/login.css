@@ -1,0 +1,120 @@
+/* Reset e configuração inicial */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #4b79a1;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Seção Descrição */
+.descricao {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.descricao h2 {
+  color: #2c3e50;
+}
+
+.descricao ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.descricao ul li {
+  margin-bottom: 8px;
+}
+
+/* Seção Login */
+.login {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.login input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.2s ease;
+}
+
+.login input:focus {
+  border-color: #4b79a1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(75, 121, 161, 0.2);
+}
+
+.login button {
+  background-color: #4b79a1;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #3a6282;
+}
+
+.login button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(75, 121, 161, 0.4);
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+
+  .descricao,
+  .login {
+    padding: 20px;
+  }
+}
