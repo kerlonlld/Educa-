@@ -111,7 +111,7 @@ function atualizarProgresso() {
 
 function showSection(sectionId) {
   if (sectionId === 'sair') {
-    window.location.href = '../home/home.html';
+    window.location.href = '../Educa-/login.html';
     return;
   }
 
